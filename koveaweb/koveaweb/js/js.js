@@ -19,8 +19,17 @@ $(function(){
        variableWidth: true,
        arrows:false,
        autoplay:true,
-
    })
+
+   
+   $('.visual_slide_allows i:first-child').on('click',function(){
+    $('.visual_slide').slick('slickPrev')
+  });
+  $('.visual_slide_allows i:last-child').on('click',function(){
+      $('.visual_slide').slick('slickNext')
+  });
+
+
 
    $('.notice_slide').slick({
      dots: true,
@@ -34,22 +43,9 @@ $(function(){
      verticalSwiping: true,
      vertical: true,
  })
+
+  $("#bgndVideo").YTPlayer();
    
-
-
-
-
-
-
-
-
-
-   $('.visual_slide_allows i:first-child').on('click',function(){
-    $('.visual_slide').slick('slickPrev')
-  });
-  $('.visual_slide_allows i:last-child').on('click',function(){
-      $('.visual_slide').slick('slickNext')
-  });
 
     //스크롤탑 탑 박스
     $('.scroll_top_box').click(function(){
