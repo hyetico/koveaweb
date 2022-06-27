@@ -381,6 +381,11 @@
   position: relative;
 }
 
+.visual_slide .vs_img {
+  position: relative;
+  z-index: 1500;
+}
+
 
 .visual_slide .vs_img01 {
   width: 100%;
@@ -422,6 +427,22 @@
   height: 600px;
 }
 
+.visual_slide .btn_detail {
+  display: block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size:13px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1600;
+}
+
 
 /* allow_box */
 .arrow_box {
@@ -431,7 +452,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1280px;
-  height: 600px;
+  height: 300px;
 }
 
 /* visual_slide_arrows */
