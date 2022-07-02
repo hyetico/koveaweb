@@ -6,7 +6,7 @@ $(function(){
     slidesToScroll: 1,
     autoplayspeed:1000,
     vertical : false,
-    dots:false,
+    dots:true,
    })
 
 
@@ -31,21 +31,29 @@ $(function(){
 
 
 
-   $('.notice_slide').slick({
-     dots: false,
-     infinite: true,
-     speed: 300,
-     slidesToShow: 1,
-     centerMode: true,
-    //  variableWidth: true,
-     arrows:false,
-     autoplay:true,
-     verticalSwiping: true,
-     vertical: true,
- })
+//    $('.notice_slide').slick({
+//      dots: false,
+//      infinite: true,
+//      speed: 300,
+//      slidesToShow: 1,
+//      centerMode: true,
+//     //  variableWidth: true,
+//      arrows:false,
+//      autoplay:true,
+//      verticalSwiping: true,
+//      vertical: true,
+//  })
 
-  $("#bgndVideo").YTPlayer();
-   
+ $("#bgndVideo").YTPlayer({
+  videoURL:'xvRXvVNeIiY',
+  containment:'self',
+  autoPlay:true, //자동으로 재생 
+  mute:true,
+  startAt:0,
+  opacity:1,
+  showControls:false, 
+  playOnlyIfVisible: true, //영상이 멈춰있다가 재생해줌.
+});
 
     //스크롤탑 탑 박스
     $('.scroll_top_box').click(function(){

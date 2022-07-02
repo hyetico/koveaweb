@@ -6,12 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-  <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
   <link rel="stylesheet" href="./css/index.css">
   <script src="./js/jquery-3.6.0.min.js"></script>
+
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+  <!-- slick -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  
+  <!-- YTPlayer  -->
+  <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
   <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+  <script defer src="./js/javascript.js"></script>
   <script src="./js/js.js"></script>
 </head>
 <body>
@@ -65,11 +74,16 @@
           </div>
 
           <div class="notice_box">
-            <div class="notice_slide">
-              <div><a href="#"><img src="./img/notice_01.jpeg" alt=""></a></div>
-              <div><a href="#"><img src="./img/notice_02.jpeg" alt=""></a></div>
-              <div><a href="#"><img src="./img/notice_03.jpeg" alt=""></a></div>
+            <div class="swiper">
+              <div class="swiper-wrapper notice_slide">
+                <div class="swiper-slide"><a href="#"><img src="./img/notice_01.jpeg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="./img/notice_02.jpeg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="./img/notice_03.jpeg" alt=""></a></div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
+          </div>
+           
           </div>
         </div>
       </div>
@@ -563,139 +577,141 @@
 
   <section class="best_new_outer">
     <div class="best_new_inner">
-        <div class="product_sheet">
-          <div class="best_sheet">
-            <h2 class="bestbtn p_label">베스트</h2>
-            <div class="best_product">
-              <div class="product">
-                <div class="products b_products01">
-                  <a href="/seasonselection/detailpage/detail.html">
-                  <div class="inner"><img src="./img/monster.png" alt="몬스터카키">
-                  <div class="imglabel">BEST</div>
-                  </div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>몬스터(카키)</div>
-                  <div>890,000원</div>
-                  </a>
+      <div class="best_new_tab">
+        <h2 class="bestbtn bn_on"><a href="#">베스트</a></h2>
+        <h2 class="allbtn p_label"><a href="#">신상품</a></h2>
+      </div>
+      <div class="product_sheet">
+        <div class="best_sheet bn_sheet bn_sheet_on">
+          <div class="best_product">
+            <div class="product">
+              <div class="products b_products01">
+                <a href="/seasonselection/detailpage/detail.html">
+                <div class="inner"><img src="./img/monster.png" alt="몬스터카키">
+                <div class="imglabel">BEST</div>
                 </div>
-      
-                <div class="products b_products02">
-                  <a href="#">
-                    <div class="inner"><img src="./img/best_products_02.png" alt="고스트 플러스(차콜)"></div>
-                    <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                    <div>고스트 플러스(차콜)</div>
-                    <div>890,000원</div>
-                    </a>
-                </div>
-    
-                <div class="products b_products03">
-                  <a href="#">
-                    <div class="inner"><img src="./img/retropavillion.png" alt="레트로 파빌리온"></div>
-                    <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                    <div>레트로 파빌리온</div>
-                    <div>1,380,000원</div>
-                  </a>
-                </div>
-      
-                <div class="products b_products04">
-                  <a href="#"></a>
-                    <div class="inner"><img src="./img/best_products_04.png" alt="몬타나(민트)"></div>
-                    <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                    <div>몬타나(민트)</div>
-                    <div>198,000원</div>
-                  </a>
-                </div>
-    
-                <div class="products b_products05">
-                  <a href="#">
-                    <div class="inner"><img src="./img/best_products_05.png" alt="T코어(탄)"></div>
-                    <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                    <div>T코어(탄)</div>
-                    <div>295,000원</div>
-                  </a>
-                </div>
-    
-                <div class="products b_products06">
-                  <a href="#">
-                    <div class="inner"><img src="./img/season_products_04.png" alt="릴렉스 롱 체어(블랙)"></div>
-                    <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                    <div>릴렉스 롱 체어(블랙)</div>
-                    <div>53,000원</div>
-                    </a>
-                </div>
-    
-              </div> <!-- product -->
-            </div> <!-- best_product -->
-    
-          </div><!-- best_sheet -->
-    
-          <div class="all_sheet">
-            <h2 class="allbtn p_label">신상품</h2>
-            <div class="all_product">
-              <div class="product">
-                <div class="products a_products01">
-                  <a href="#">
-                  <div class="inner"><img src="./img/monsterbla.png" alt="몬스터(블랙)">
-                  <div class="imglabel imglabel02">HOT</div>
-                  </div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>몬스터(블랙)</div>
-                  <div>890,000원</div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>몬스터(카키)</div>
+                <div>890,000원</div>
                 </a>
-                </div>
-      
-                <div class="products a_products02">
-                  <a href="#">
-                  <div class="inner"><img src="./img/season_products_02.png" alt="네스트W(아이보리)"></div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>네스트W(아이보리)</div>
+              </div>
+    
+              <div class="products b_products02">
+                <a href="#">
+                  <div class="inner"><img src="./img/best_products_02.png" alt="고스트 플러스(차콜)"></div>
+                  <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                  <div>고스트 플러스(차콜)</div>
                   <div>890,000원</div>
                   </a>
-                </div>
+              </div>
+  
+              <div class="products b_products03">
+                <a href="#">
+                  <div class="inner"><img src="./img/retropavillion.png" alt="레트로 파빌리온"></div>
+                  <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                  <div>레트로 파빌리온</div>
+                  <div>1,380,000원</div>
+                </a>
+              </div>
     
-                <div class="products a_products03">
-                  <a href="#">
-                  <div class="inner"><img src="./img/season_products_03.png" alt="이지 라이트 테이블 (하드탑)"></div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>이지 라이트 테이블 (하드탑)</div>
-                  <div>109,000원</div>
-                  </a>
-                </div>
-      
-                <div class="products a_products04">
-                  <a href="#">
+              <div class="products b_products04">
+                <a href="#"></a>
+                  <div class="inner"><img src="./img/best_products_04.png" alt="몬타나(민트)"></div>
+                  <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                  <div>몬타나(민트)</div>
+                  <div>198,000원</div>
+                </a>
+              </div>
+  
+              <div class="products b_products05">
+                <a href="#">
+                  <div class="inner"><img src="./img/best_products_05.png" alt="T코어(탄)"></div>
+                  <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                  <div>T코어(탄)</div>
+                  <div>295,000원</div>
+                </a>
+              </div>
+  
+              <div class="products b_products06">
+                <a href="#">
                   <div class="inner"><img src="./img/season_products_04.png" alt="릴렉스 롱 체어(블랙)"></div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                  <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
                   <div>릴렉스 롱 체어(블랙)</div>
                   <div>53,000원</div>
-                </a>
-                </div>
-    
-                <div class="products a_products05">
-                  <a href="#">
-                  <div class="inner"><img src="./img/season_products_05.png" alt="에어라이트체어M(그린)"></div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>
-                    에어라이트체어M(그린)</div>
-                  <div>68,000원</div>
-                </a>
-                </div>
-    
-                <div class="products a_products06">
-                  <a href="#">
-                  <div class="inner"><img src="./img/season_products_06.png" alt="피크닉 매트 UP"></div>
-                  <div class="heart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
-                  <div>
-                    피크닉 매트 UP</div>
-                  <div>36,000원</div>
                   </a>
+              </div>
+  
+            </div> <!-- product -->
+          </div> <!-- best_product -->
+  
+        </div><!-- best_sheet -->
+  
+        <div class="all_sheet bn_sheet">
+          <div class="all_product">
+            <div class="product">
+              <div class="products a_products01">
+                <a href="#">
+                <div class="inner"><img src="./img/monsterbla.png" alt="몬스터(블랙)">
+                <div class="imglabel imglabel02">HOT</div>
                 </div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>몬스터(블랙)</div>
+                <div>890,000원</div>
+              </a>
+              </div>
     
-              </div> <!-- product -->
-            </div> <!-- all_product -->
+              <div class="products a_products02">
+                <a href="#">
+                <div class="inner"><img src="./img/season_products_02.png" alt="네스트W(아이보리)"></div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>네스트W(아이보리)</div>
+                <div>890,000원</div>
+                </a>
+              </div>
+  
+              <div class="products a_products03">
+                <a href="#">
+                <div class="inner"><img src="./img/season_products_03.png" alt="이지 라이트 테이블 (하드탑)"></div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>이지 라이트 테이블 (하드탑)</div>
+                <div>109,000원</div>
+                </a>
+              </div>
     
-          </div> <!-- all_sheet -->
-        </div> <!-- productsheet -->
+              <div class="products a_products04">
+                <a href="#">
+                <div class="inner"><img src="./img/season_products_04.png" alt="릴렉스 롱 체어(블랙)"></div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>릴렉스 롱 체어(블랙)</div>
+                <div>53,000원</div>
+              </a>
+              </div>
+  
+              <div class="products a_products05">
+                <a href="#">
+                <div class="inner"><img src="./img/season_products_05.png" alt="에어라이트체어M(그린)"></div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>
+                  에어라이트체어M(그린)</div>
+                <div>68,000원</div>
+              </a>
+              </div>
+  
+              <div class="products a_products06">
+                <a href="#">
+                <div class="inner"><img src="./img/season_products_06.png" alt="피크닉 매트 UP"></div>
+                <div class="heart_cart"><i class="xi-heart-o"></i><i class="xi-cart-o"></i></div>
+                <div>
+                  피크닉 매트 UP</div>
+                <div>36,000원</div>
+                </a>
+              </div>
+  
+            </div> <!-- product -->
+          </div> <!-- all_product -->
+  
+        </div> <!-- all_sheet -->
+      </div> <!-- productsheet -->
     </div>
     <!-- best_new_inner -->
   </section>
@@ -863,7 +879,7 @@
       <section class="md_outer_r">
         <div class="by_md">
           <h4>by<span class="mdleft">MD</span></h4>
-            <input type="checkbox" id="mdtab">
+            <input type="checkbox" id="mdtab">            
             <div class="mdtab_label">
               <label for="mdtab" class="md_l_btn md_label_box"><i class="xi-angle-left-min"></i></label>
               <label for="mdtab" class="md_r_btn md_label_box"><i class="xi-angle-right-min"></i></label>
@@ -991,10 +1007,9 @@
   <section class="youtube_more_outer">
     <div class="youtube_most_inner">
       <div class="youtube_outer">
-        <!--    <div id="bgndVideo" class="player" data-property= "{videoURL:'c7Tg5uNTmfg',showControls:true, autoPlay:true, loop:false, 
-          vol:50, mute:true, startAt:10, opacity:1, addRaster:false, quality:'default'}">
-          </div>
-          -->
+        <h2>kovea youtube</h2>
+       <div id="bgndVideo" class="player"></div>
+
       </div>
       <div class="most_content_outer">
         <h4>가장 많이 본 콘텐츠</h4>
@@ -1002,7 +1017,7 @@
             <li>
               <a href="#">
                 <div class="most_cont">
-                  <div class="most_cont_title">[코베아 40주년]소설가 김영하 『캠핑이 나에게 준 유산</div>
+                  <div class="most_cont_title">[코베아 40주년]소설가 김영하 『캠핑이 나에게 준 유산』</div>
                   <div class="most_cont_img"><img src="https://image.koveashop.co.kr/image/image-view?type=BBSDTL&amp;path=/2022/05/04&amp;id1=16516329908571" alt="[코베아 40주년]소설가 김영하 『캠핑이 나에게 준 유산』"></div>
                 </div>
               </a>
@@ -1020,6 +1035,22 @@
                 <div class="most_cont">
                   <div class="most_cont_title">레트로 캠핑 웨건ㅣ코베아 캠핑이야기</div>
                   <div class="most_cont_img"><img src="https://image.koveashop.co.kr/image/image-view?type=BBSDTL&amp;path=/2022/03/16&amp;id1=16473916727151" alt="레트로 캠핑 웨건ㅣ코베아 캠핑이야기"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="most_cont">
+                  <div class="most_cont_title">코베아 달고나 세트ㅣ코베아 캠핑이야기</div>
+                  <div class="most_cont_img"><img src="https://image.koveashop.co.kr/image/image-view?type=BBSDTL&amp;path=/2022/03/16&amp;id1=16473915333891" alt="코베아 달고나 세트ㅣ코베아 캠핑이야기"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="most_cont">
+                  <div class="most_cont_title">코베아 달고나 세트ㅣ코베아 캠핑이야기</div>
+                  <div class="most_cont_img"><img src="https://image.koveashop.co.kr/image/image-view?type=BBSDTL&amp;path=/2022/03/16&amp;id1=16473915333891" alt="코베아 달고나 세트ㅣ코베아 캠핑이야기"></div>
                 </div>
               </a>
             </li>
@@ -1061,9 +1092,21 @@
       <!-- comingsoon_left -->
       <div class="comingsoon_right">
         <div class="comming_product_conts comming_product_conts01">
+          <div class="btn_comming_arrows">
+            <div class="btn_comming_arrow up_arrow">
+              <i class="xi-angle-up-min"></i>
+            </div>
+            <div class="btn_comming_arrow dw_arrow">
+              <i class="xi-angle-down-min"></i>
+            </div>
+          </div>
+          <!-- btn_comming_arrows -->
+
           <div class="coming_product_cont coming_product_cont_l">
-            <h3>애드온스토브스탠드</h3>
-            <span>07월04일 입고예정</span>
+            <div class="comming_product_tit">
+              <h3>애드온스토브스탠드</h3>
+              <span>07월04일 입고예정</span>
+            </div>
             <div class="comingsoon_product_img">
               <img src="./img/comingsoon_02.png" alt="">
             </div>
@@ -1073,8 +1116,10 @@
             </div>
           </div>
           <div class="coming_product_cont coming_product_cont_r">
-            <h3>하드워터탱크 15L</h3>
-            <span>07월04일 입고예정</span>
+            <div class="comming_product_tit">
+              <h3>하드워터탱크 15L</h3>
+              <span>07월04일 입고예정</span>
+            </div>
             <div class="comingsoon_product_img">
               <img src="./img/comingsoon_01.png" alt="">
             </div>
@@ -1087,9 +1132,21 @@
         <!-- comming_product_conts01 -->
 
         <div class="comming_product_conts comming_product_conts02">
+          <div class="btn_comming_arrows">
+            <div class="btn_comming_arrow up_arrow">
+              <i class="xi-angle-up-min"></i>
+            </div>
+            <div class="btn_comming_arrow dw_arrow">
+              <i class="xi-angle-down-min"></i>
+            </div>
+          </div>
+          <!-- btn_comming_arrows -->
           <div class="coming_product_cont coming_product_cont_l">
-            <h3>AL 주전자 1.4</h3>
-            <span>07월04일 입고예정</span>
+            <div class="comming_product_tit">
+              <h3>AL 주전자 1.4</h3>
+              <span>07월04일 입고예정</span>
+            </div>
+            <!-- comming_product_tit -->
             <div class="comingsoon_product_img">
               <img src="./img/comingsoon_03.png" alt="">
             </div>
@@ -1099,8 +1156,12 @@
             </div>
           </div>
           <div class="coming_product_cont coming_product_cont_r">
-            <h3>메쉬 시스템 테이블</h3>
-            <span>07월04일 입고예정</span>
+            <div class="comming_product_tit">
+              <h3>메쉬 시스템 테이블</h3>
+              <span>07월04일 입고예정</span>
+            </div>
+            <!-- comming_product_tit -->
+            
             <div class="comingsoon_product_img">
               <img src="./img/restock_01.png" alt="">
             </div>
@@ -1121,17 +1182,35 @@
   <section class="sns_banner_outer">
     <div class="sns_banner_inner">
       <div class="sns_slider">
-        <div class="sns_slider_box">
-          <a href="#">instagram</a>
-          <p class="sns_slider_txt">
-            <span>#백패킹 #미니멀팸핑 #감성캠핑</span>
-          </p>
-        </div>
-        <div class="sns_slider_box">
-          <a href="#">YouTube</a>
-          <p class="sns_slider_txt">
-            <span>유투브 채널 바로가기</span>
-          </p>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="sns_slider_box">
+                <div class="sns_slider_txt">
+                  <a href="#">instagram</a>
+                  <p class="sns_txt">
+                    <span>#백패킹 #미니멀팸핑 #감성캠핑</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sns_slider_box">
+                <a href="#">YouTube</a>
+                <p class="sns_slider_txt">
+                  <span>유투브 채널 바로가기</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="btn_sns_arrows">
+            <div class="btn_sns_arrow up_arrow">
+              <i class="xi-angle-up-min"></i>
+            </div>
+            <div class="btn_sns_arrow dw_arrow">
+              <i class="xi-angle-down-min"></i>
+            </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -1141,9 +1220,12 @@
     <div class="ko_talk_inner">
       <div class="ko_talk_title">
         <h2>KO_TALK</h2>
-        <p>캠핑을 다녀오셨나요?<br>
-          나만의 캠핑 후기를 남겨보세요.
-        </p>
+        <div class="reviewtit_btn_write">
+          <p>캠핑을 다녀오셨나요?<br>
+            나만의 캠핑 후기를 남겨보세요.
+          </p>
+          <a class="btn_write" href="#">review write<i class="xi-pen"></i></a>
+        </div>
       </div>
       <div class="ko_talk_contents ko_talk_contents01">
         <div class="ko_talk_cont">
