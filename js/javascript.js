@@ -35,4 +35,16 @@ new Swiper('.header_outer .notice_box .swiper',{
       nextEl: ".sns_banner_outer .btn_sns_arrows .dw_arrow"
     }
   })
+
+  new Swiper('.commingsoon_right .swiper',{
+    direction:'vertical',
+    autoplay:true,
+    delay:2000,
+    loop:true,
+
+    navigation: {
+      prevEl: ".sns_banner_outer .btn_sns_arrows .up_arrow",
+      nextEl: ".sns_banner_outer .btn_sns_arrows .dw_arrow"
+    }
+  })
   

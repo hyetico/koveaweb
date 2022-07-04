@@ -1,6 +1,8 @@
 $(function(){
 
  $("#bgndVideo").YTPlayer({
+  height: '100%',
+	width: '100%',
   videoURL:'xvRXvVNeIiY',
   containment:'self',
   autoPlay:true, //자동으로 재생 
