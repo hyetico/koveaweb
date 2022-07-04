@@ -912,7 +912,7 @@
 }
 
 .season_left {
-  width: 20%;
+  width: 25%;
   position: relative;
   margin-right: 15px;
 }
@@ -920,7 +920,7 @@
 .season_left .season_left_inner {
   position: relative;
   display: block;
-  padding: 60px 20px 55px 20px;
+  padding: 90px 20px 55px 20px;
   transition: all 0.3s;
 }
 
@@ -953,8 +953,8 @@
 
 .season_left_comment {
   line-height: 25px;
-  font-size: 14px;
-  padding: 40px 0;
+  font-size: 15px;
+  padding: 65px 0;
   box-sizing: border-box;
 }
 
@@ -1008,9 +1008,9 @@
   margin-bottom: 30px;
 }
 
-.season_box01 {
+/* .season_box01 {
   margin-right: 120px;
-}
+} */
 
 .season_title h2 {
   text-align: center;
@@ -1019,6 +1019,7 @@
 .s_products {
   overflow: hidden;
   position: relative;
+  margin: 5px 5px;
 }
 
 .s_products:hover .info_btn {
@@ -1102,7 +1103,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #000;
+  /* background-color: #000; */
   width: 90px;
   height: 33px;
   line-height: 33px;
@@ -1115,7 +1116,7 @@
   display: block;
   text-align: center;
   font-weight: 500;
-  color: #fff;
+  /* color: #fff; */
   border-radius: 3px;
   transition: all 0.3s;
 }
@@ -1125,7 +1126,6 @@
   text-decoration: underline;
 
 }
-
 
 .season_right .size_box {
   position: relative;
@@ -1147,7 +1147,7 @@
   overflow: hidden;
   position: absolute;
   z-index: 100;
-  left: 50%;
+  left: 38%;
   bottom: 8px;
   transform: translateX(-50%);
   font-size: 11px;
