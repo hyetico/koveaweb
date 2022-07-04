@@ -1225,7 +1225,9 @@
   display: block;
 }
 
-.best_new_tab h2 {}
+.best_new_tab h2 {
+  font-size: 18px;
+}
 
 .best_new_tab h2 a {
   display: block;
@@ -1267,19 +1269,29 @@
 }
 
 .product {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .products {
-  margin: 15px 10px;
-  margin-right: 10px;
-
+  width: 18%;
+  margin-left: 30px;
 }
 
+.products:nth-child(1),
+.products:nth-child(6){
+  margin: 0;
+}
+
+.products_top {
+  margin-bottom: 15px;
+}
 .products .inner {
   position: relative;
-  width: 190px;
+  width:100%;
   border: 1px solid #f1f1f1;
+  box-sizing: border-box;
 }
 
 .imglabel {
