@@ -1,5 +1,8 @@
 /* header_outer */
 .header_outer {
+  position: relative;
+  z-index: 5000;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -110,7 +113,9 @@
 }
 
 /* .header_center_outer  */
-.header_center_outer {}
+.header_center_outer {
+  background-color: #fff;
+}
 
 .header_center {
   display: flex;
@@ -135,10 +140,28 @@
   width: 120px;
 }
 
-.header_center .logo div {
+.header_center .logo p {
   font-size: 11px;
+  color: #f49c0f;
+
+
 }
 
+
+.logo_txt>span {
+  display: inline-block;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: rotate(90deg);
+  color: #f49c0f;
+  width: 0.45vw;
+}
+
+.logo_txt span.show {
+  color: #f49c0f;
+  opacity: 1;
+  transform: rotate(0);
+}
 
 /* search_box  */
 .search_box {
@@ -161,7 +184,7 @@
 .search_var_border input {
   display: block;
   /* margin: 0 auto; */
-  width: 80%;
+  width: 70%;
   border: none;
   border: 1px solid white;
   /* outline: none; */
@@ -298,9 +321,15 @@
 
 /* menu_outer  */
 .menu_outer {
+  z-index: 3000;
+  overflow: hidden;
   position: relative;
+  position: absolute;
+  left: 0;
   opacity: 0.9;
   background-color: #000;
+  height: 60px;
+  width: 100%;
 }
 
 .menu_inner {
@@ -323,12 +352,10 @@
 
 .search_nav {
   /* flex: 1; */
-
 }
 
 .lnb_nav {
   width: 30%;
-
 }
 
 .brand_nav {
@@ -343,17 +370,13 @@
 
 .menu_nav ul li a {
   display: block;
-  /* width: 100%;
-  height: 100%; */
   font-size: 13px;
   font-weight: 500;
-  /* color: #f49c0f; */
   color: #fff;
   transition: all 0.4s;
 }
 
 .menu_nav ul li a:hover {
-  /* color: #ccc; */
   color: #f49c0f;
   text-decoration: underline;
 
@@ -413,24 +436,34 @@
 
 /* .menu_sub_outer */
 .menu_sub_outer {
-  z-index: 200;
+  /* overflow: hidden; */
   position: relative;
   position: absolute;
   left: 0;
   width: 100%;
-}
-
-.menu_sub {
+  height: 500px;
   background-color: #fff;
+
 }
 
 .menu_sub_search {
-  display: none;
-  width: 1280px;
+  position: absolute;
+  top: -500px;
+  left: 0;
+  width: 100%;
   height: 500px;
   margin: 0 auto;
   padding: 30px 0;
+  transition: all 0.3s ease-in;
+  z-index: 2000;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+.menu_sub_outer .innerbox {
+  margin: 0 auto;
+  width: 1280px;
 }
 
 .menu_sub_search input.menu_search {
@@ -475,7 +508,21 @@
 
 /* sub_lnb_outer */
 .sub_lnb_outer {
-  display: none;
+  position: absolute;
+  top: -360px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 30px 0;
+  transition: all 0.3s ease-in;
+  z-index: 2000;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.sub_lnb_outer .innerbox {
   width: 1280px;
   margin: 0 auto;
 }
@@ -484,8 +531,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 40px 0 50px 0;
+  padding: 60px 0 50px 0;
   box-sizing: border-box;
+  /* background-color: #00C73C; */
 }
 
 .store {
@@ -506,6 +554,10 @@
 .menu_sub_lnb ul li>a {
   font-size: 13px;
   display: block;
+}
+
+.lnb_title {
+  margin-bottom: 10px;
 }
 
 .lnb_title>a {
@@ -965,8 +1017,8 @@
   left: 20px;
   display: block;
   width: 100px;
-  height: 35px;
-  line-height: 35px;
+  height: 40px;
+  line-height: 40px;
   background-color: #000;
   color: #fff;
   text-align: center;
@@ -982,8 +1034,24 @@
 
 /* .season_right */
 .season_right {
+  overflow: hidden;
   position: relative;
   width: 80%;
+  height: 800px;
+}
+
+.season_right .seatab_cont {
+  position: absolute;
+  left: 0;
+  height: 800px;
+}
+
+.season_right .seatab_cont.on {
+  display: block;
+}
+
+.season_right .seatab_cont {
+  display: none;
 }
 
 .season_product_box {
@@ -992,7 +1060,9 @@
   margin-bottom: 30px;
   padding: 0px 0px 50px 0px;
   box-sizing: border-box;
+  background-color: #fff;
 }
+
 
 .season_box {
   display: flex;
@@ -1004,13 +1074,25 @@
   justify-content: center;
 }
 
+.season_box .ss {
+  position: relative;
+}
+
 .season_box .ss_bottom {
   margin-bottom: 30px;
 }
 
-/* .season_box01 {
-  margin-right: 120px;
-} */
+
+.season_box .ss h5 {
+  z-index: 100;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #444;
+}
+
 
 .season_title h2 {
   text-align: center;
@@ -1074,8 +1156,8 @@
 }
 
 .s_products:hover .size_box {
-  border: 1px solid #e7e7e7;
-  box-sizing: border-box;
+  /* border: 1px solid #e7e7e7;
+  box-sizing: border-box; */
 }
 
 .s_product_name {
@@ -1116,7 +1198,6 @@
   display: block;
   text-align: center;
   font-weight: 500;
-  /* color: #fff; */
   border-radius: 3px;
   transition: all 0.3s;
 }
@@ -1167,6 +1248,7 @@
 
 /* .season_menu */
 .season_menu_tabbtn {
+  overflow: hidden;
   width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -1191,9 +1273,9 @@
   width: 100%;
   color: #fff;
   display: block;
-  height: 50px;
+  height: 55px;
   text-align: center;
-  line-height: 50px;
+  line-height: 55px;
   font-size: 16px;
   transition: all 0.3s;
 }
@@ -1203,7 +1285,7 @@
   text-decoration: underline;
 }
 
-.season_menu_tabbtn li.is_on a {
+.season_menu_tabbtn li.on a {
   background-color: #f49c0f;
   color: #fff;
   text-decoration: none;
@@ -2858,12 +2940,6 @@
 
 
 
-
-
-
-
-
-
 /*-- 퀵배너 --*/
 /* side_menu_outer */
 .side_menu_outer {
@@ -2925,13 +3001,13 @@
   color: #fff;
 }
 
+
 .quick_point_txt {
-  display: none;
   position: absolute;
   top: 50%;
   right: 45px;
   transform: translateY(-50%);
-  /* display: none; */
+  display: none;
   width: 50px;
   height: 20px;
   line-height: 20px;
@@ -2939,8 +3015,13 @@
   border-radius: 8px;
   font-size: 8px;
   text-align: center;
-  color: #000;
+  color: #444;
 }
+
+.side_quick_banner ul li:hover .quick_point_txt {
+  display: block;
+}
+
 
 .point_txt_basket {
   width: 60px;
@@ -2975,7 +3056,7 @@
 
 /* .side_top_btn  */
 .side_top_btn {
-  display: none;
+  opacity: 0;
   position: absolute;
   left: -40px;
   top: 542px;

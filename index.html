@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="./css/index.css">
   <script src="./js/jquery-3.6.0.min.js"></script>
 
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+
   <!-- swiper -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-
-  <!-- slick -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
   
   <!-- YTPlayer  -->
   <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
@@ -56,7 +56,7 @@
         <div class="header_center">
           <div class="logo">
             <a href="./index.html"><img src="./img/logo_header_ko.png" alt="kovea_logo"></a>
-            <div>즐거운 레저 코베아</div>
+            <p class="logo_txt">즐 거 운 레 저 코 베 아</p>
           </div>
 
           <div class="search_box">
@@ -85,11 +85,11 @@
             </div>
           </div>
            
-          </div>
         </div>
       </div>
-      <!-- header_center_outer -->
+        <!-- header_center_outer -->
     </div>
+    <!-- header_inner -->
   </div>
   <!-- header_outer -->
 
@@ -97,7 +97,7 @@
     <div class="menu_inner">
       <nav class="menu_nav">
         <ul class="search_nav">
-          <li><a href="#"><i class="xi-search"></i> SEARCH</a></li>
+          <li><a href="#"><i class="xi-search"></i>SEARCH</a></li>
         </ul>
         <ul class="lnb_nav">
           <li class="home"><a href="#"><i class="xi-home"></i></a></li>
@@ -105,7 +105,7 @@
           <li class="camicon"><a href="#">CAMPING</a></li>
           <li><a href="#">KO-TALK</a></li>
           <li><a href="#">PROGRAM</a></li>
-          <li><a href="#">매장안내</a></li>
+          <li><a href="#">고객센터</a></li>
         </ul>
         <ul class="brand_nav">
           <li><a href="#">COMPANY</a></li>
@@ -117,90 +117,94 @@
 
   <div class="menu_sub_outer search_outer">
     <div class="menu_sub">
-      <div class="menu_sub_search">
+      <div class="menu_sub_search on">
+       <div class="innerbox">
         <input type="text" class="menu_search" placeholder="제품명 검색">
-          <ul class="search_cont">
-            <strong>인기 검색어</strong>
-            <li><a href="#!">몬스터(카키)</a></li>
-            <li><a href="#!">네스트W(아이보리)</a></li>
-            <li><a href="#!">몬타나</a></li>
-            <li><a href="#!">멀티행어</a></li>
-            <li><a href="#!">이지 라이트 테이블(하드탑)</a></li>
-          </ul>
-          <ul class="search_cont">
-            <strong>NEW</strong>
-            <li><a href="#!">에어캠프 시그니처</a></li>
-            <li><a href="#!">아웃백 시그니처</a></li>
-            <li><a href="#!">네스트W(브라운)</a></li>
-            <li><a href="#!">레트로 하우스</a></li>
-            <li><a href="#!">고타르</a></li>
-          </ul>
+        <ul class="search_cont">
+          <strong>인기 검색어</strong>
+          <li><a href="#!">몬스터(카키)</a></li>
+          <li><a href="#!">네스트W(아이보리)</a></li>
+          <li><a href="#!">몬타나</a></li>
+          <li><a href="#!">멀티행어</a></li>
+          <li><a href="#!">이지 라이트 테이블(하드탑)</a></li>
+        </ul>
+        <ul class="search_cont">
+          <strong>NEW</strong>
+          <li><a href="#!">에어캠프 시그니처</a></li>
+          <li><a href="#!">아웃백 시그니처</a></li>
+          <li><a href="#!">네스트W(브라운)</a></li>
+          <li><a href="#!">레트로 하우스</a></li>
+          <li><a href="#!">고타르</a></li>
+        </ul>
+       </div>
       </div>
     </div>
   </div>
   <!-- menu_sub_outer -->
 
   <div class="menu_sub_outer lnb_outer">
-    <div class="menu_sub">
-      <div class="sub_lnb_outer">
-        <div class="menu_sub_lnb">
-  
-          <div class="store">
-            <ul>
-              <li class="lnb_title"><a href="#">STORE</a></li>
-              <li><a href="#">All</a></li>
-              <li><a href="#">NEW</a></li>
-              <li><a href="#">텐트</a></li>
-            </ul>
-            <ul>
-              <li><a href="#"></a></li>
-              <li><a href="#">가스용품</a></li>
-              <li><a href="#">퍼니처</a></li>
-              <li><a href="#">캠핑장비</a></li>
-            </ul>
-            <ul>
-              <li><a href="#"></a></li>
-              <li><a href="#">침낭/매트</a></li>
-              <li><a href="#">캠핑가전</a></li>
-              <li><a href="#">주방/그릴</a></li>
-            </ul>
-          </div>
-
-          <ul>
-            <li class="lnb_title"><a href="#">CAMPING<span>+</span></a></li>
-            <li><a href="#!">SEASON SELECTION</a></li> 
-            <li><a href="#!">CAMPING BASIC</a></li> 
-          </ul>
-
-          <ul>
-            <li class="lnb_title"><a href="#">KO-TALK</a></li>
-            <!-- <strong class="lnb_title">KO-TALK</strong> -->
-            <li><a href="#">실시간 사용후기</a></li>
-            <li><a href="#">코베아 유튜브</a></li>
-          </ul>
-
-          <ul>
-            <li class="lnb_title"><a href="#">PROGRAM</a></li>
-            <li><a href="#">기획전</a></li>
-            <li><a href="#">이벤트</a></li>
-          </ul>
-
-          <ul>
-            <li class="lnb_title"><a href="#">고객센터</a></li>
-            <li><a href="#">공지사항</a></li> 
-            <li><a href="#">F&A</a></li> 
-            <li><a href="#">1:1문의</a></li> 
-          </ul>
-
-          <ul>
-            <li><a href="#">A/S SHOP</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#">세일존</a></li>
-            <li><a href="#">캠핑장</a></li>
-          </ul>
+      <div class="menu_sub">
+        <div class="sub_lnb_outer">
+          <div class="innerbox">
+            <div class="menu_sub_lnb">
+                <div class="store">
+                  <ul>
+                    <li class="lnb_title"><a href="#">STORE</a></li>
+                    <li><a href="#">All</a></li>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">텐트</a></li>
+                  </ul>
+                  <ul>
+                    <li class="lnb_title"><a href="#"></a></li>
+                    <li><a href="#">가스용품</a></li>
+                    <li><a href="#">퍼니처</a></li>
+                    <li><a href="#">캠핑장비</a></li>
+                  </ul>
+                  <ul>
+                    <li class="lnb_title"><a href="#"></a></li>
+                    <li><a href="#">침낭/매트</a></li>
+                    <li><a href="#">캠핑가전</a></li>
+                    <li><a href="#">주방/그릴</a></li>
+                  </ul>
+                </div>
+      
+                <ul>
+                  <li class="lnb_title"><a href="#">CAMPING<span>+</span></a></li>
+                  <li><a href="#!">SEASON SELECTION</a></li> 
+                  <li><a href="#!">CAMPING BASIC</a></li> 
+                </ul>
+      
+                <ul>
+                  <li class="lnb_title"><a href="#">KO-TALK</a></li>
+                  <!-- <strong class="lnb_title">KO-TALK</strong> -->
+                  <li><a href="#">실시간 사용후기</a></li>
+                  <li><a href="#">코베아 유튜브</a></li>
+                </ul>
+      
+                <ul>
+                  <li class="lnb_title"><a href="#">PROGRAM</a></li>
+                  <li><a href="#">기획전</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+      
+                <ul>
+                  <li class="lnb_title"><a href="#">고객센터</a></li>
+                  <li><a href="#">공지사항</a></li> 
+                  <li><a href="#">F&A</a></li> 
+                  <li><a href="#">1:1문의</a></li> 
+                </ul>
+      
+                <ul>
+                  <li class="lnb_title"><a href="#">A/S SHOP</a></li>
+                  <li><a href="#">세일존</a></li>
+                  <li><a href="#">캠핑장</a></li>
+                </ul>
+                
+            </div>
+          </div> 
         </div>
-      </div>
-   </div>
+    </div>
+ 
   </div> 
   <!-- menu_sub_outer lnb_outer -->
 
@@ -435,140 +439,506 @@
           </a>    
       </div>
       <!-- season_left -->
-      <div class="season_right">
-        <div class="season_product_box">
-          <div class="season_box01 season_box">
-            <div class="ss ss_bottom">
-              <div class="s_products s_products01">
-                <div class="size_box "><a href="#"><img src="./img/monster.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div> 
-                <div class="name_price_box">
-                  <strong>몬스터</strong>
-                  ￦820,000원
+      <div class="season_right season_tab_conts">
+          <div id="tab1" class="seatab_cont on">
+            <div class="season_product_box season_product_box01 ">
+            <div class="season_box01 season_box">
+              <div class="ss ss_bottom">
+                <h5>TENT</h5>
+                <div class="s_products s_products01">
+                  <div class="size_box "><a href="#"><img src="./img/monster.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div> 
+                  <div class="name_price_box">
+                    <strong>몬스터</strong>
+                    ￦820,000원
+                  </div>
+                </div>
+                <div class="s_products s_products02">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_02.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>네스트W</strong>
+                    ￦670,000원
+                  </div>
                 </div>
               </div>
-              <div class="s_products s_products02">
-                <div class="size_box"><a href="#"><img src="./img/season_products_02.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>네스트W</strong>
-                  ￦670,000원
+              <div class="ss ss_bottom">
+                <h5>FURNITURE</h5>    
+                <div class="s_products s_products03">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_03.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>이지 라이트 테이블</strong>
+                    ￦109,000원
+                  </div>
+                </div>
+                <div class="s_products s_products04">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_04.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>릴렉스 롱 체어</strong>
+                    ￦53,000원
+                  </div>
                 </div>
               </div>
+              <div class="ss">
+                <h5>ACCESSORY</h5>
+                <div class="s_products s_products09">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_09.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>마이푸</strong>
+                    ￦65,000원
+                  </div>
+                </div>
+                <div class="s_products s_products06">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_06.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>피크닉매트 UP</strong>
+                    ￦36,000원
+                  </div>
+                </div>       
+              </div>
+            </div> <!-- season_box01  -->
+            <div class="season_box02 season_box">
+              <div class="ss ss_bottom">
+                <div class="s_products s_products07">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_07.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>몬타나</strong>
+                    ￦198,000원
+                  </div>
+                </div>
+                <div class="s_products s_products08">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_08.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>X 코어</strong>
+                    ￦269,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss ss_bottom">
+                <div class="s_products s_products05">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_05.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>에어라이트 체어</strong>
+                    ￦68,000원
+                  </div>
+                </div>
+                <div class="s_products s_products10">
+                  <div class="size_box"><a href="#"><img src="./img/ss_img.png" alt="핸디테이블 세트"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>핸디테이블 세트</strong>
+                    ￦75,000원
+                  </div>
+                </div>          
+              </div>
+              <div class="ss">
+                <div class="s_products s_products11">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_11.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>멀티 행어</strong>
+                    ￦21,000원
+                  </div>
+                </div>
+                <div class="s_products s_products12">
+                  <div class="size_box"><a href="#"><img src="./img/season_products_12.png" alt=""></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>스퀘어릴 25M (USB)</strong>
+                    ￦98,000원
+                  </div>
+                </div>       
+              </div>
+              
             </div>
-    
-            <div class="ss ss_bottom">     
-              <div class="s_products s_products03">
-                <div class="size_box"><a href="#"><img src="./img/season_products_03.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>이지 라이트 테이블</strong>
-                  ￦109,000원
-                </div>
-              </div>
-              <div class="s_products s_products04">
-                <div class="size_box"><a href="#"><img src="./img/season_products_04.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>릴렉스 롱 체어</strong>
-                  ￦53,000원
-                </div>
-              </div>
+            <!-- season_box02 -->
             </div>
-    
-            <div class="ss">
-              <div class="s_products s_products05">
-                <div class="size_box"><a href="#"><img src="./img/season_products_05.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>에어라이트 체어</strong>
-                  ￦68,000원
-                </div>
-              </div>
-              <div class="s_products s_products06">
-                <div class="size_box"><a href="#"><img src="./img/season_products_06.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>피크닉매트 UP</strong>
-                  ￦36,000원
-                </div>
-              </div>       
-            </div>
-          </div> <!-- season_box01  -->
-    
-          <div class="season_box02 season_box">
-            <div class="ss ss_bottom">
-              <div class="s_products s_products07">
-                <div class="size_box"><a href="#"><img src="./img/season_products_07.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>몬타나</strong>
-                  ￦198,000원
-                </div>
-              </div>
-              <div class="s_products s_products08">
-                <div class="size_box"><a href="#"><img src="./img/season_products_08.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>X 코어</strong>
-                  ￦269,000원
-                </div>
-              </div>
-            </div>
-            
-            <div class="ss ss_bottom">
-              <div class="s_products s_products09">
-                <div class="size_box"><a href="#"><img src="./img/season_products_09.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>마이푸</strong>
-                  ￦65,000원
-                </div>
-              </div>
-              <div class="s_products s_products10">
-                <div class="size_box"><a href="#"><img src="./img/season_products_10.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>쿠셔닝</strong>
-                  ￦39,000원
-                </div>
-              </div>          
-            </div>
-    
-            <div class="ss">
-              <div class="s_products s_products11">
-                <div class="size_box"><a href="#"><img src="./img/season_products_11.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>멀티 행어</strong>
-                  ￦21,000원
-                </div>
-              </div>
-              <div class="s_products s_products12">
-                <div class="size_box"><a href="#"><img src="./img/season_products_12.png" alt=""></a></div>
-                <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
-                <div class="name_price_box">
-                  <strong>스퀘어릴 25M (USB)</strong>
-                  ￦98,000원
-                </div>
-              </div>       
-            </div>
-            
+          <!-- season_product_box -->
           </div>
-          <!-- season_box02 -->
+          <div id="tab2"class="seatab_cont">
+            <div class="season_product_box season_product_box02"> 
+              <div class="season_box01 season_box">
+                <div class="ss ss_bottom">
+                  <h5>TENT</h5>
+                  <div class="s_products s_products01">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_01.png" alt="몬타나 쉘터"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div> 
+                    <div class="name_price_box">
+                      <strong>몬타나 쉘터 II</strong>
+                      ￦480,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products02">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_02.png" alt="스크린 300"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>스크린 300 II</strong>
+                      ￦218,000원
+                    </div>
+                  </div>
+                </div>
+                <div class="ss ss_bottom">
+                  <h5>FURNITURE</h5>    
+                  <div class="s_products s_products03">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_03.png" alt="메쉬 윙 멀티 테이블"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>메쉬 윙 멀티 테이블</strong>
+                      ￦102,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products04">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_04.png" alt="메쉬 폴딩 쉘프"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>메쉬 폴딩 쉘프</strong>
+                      ￦77,000원
+                    </div>
+                  </div>
+                </div>
+                <div class="ss">
+                  <h5>ACCESSORY</h5>
+                  <div class="s_products s_products09">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_05.png" alt="탱크 소프트 쿨러 45L"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>탱크 소프트 쿨러 45L</strong>
+                      ￦125,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products06">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_06.png" alt="하드 워터 탱크12L"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>하드 워터 탱크12L</strong>
+                      ￦33,000원
+                    </div>
+                  </div>       
+                </div>
+              </div> <!-- season_box01  -->  
+              <div class="season_box02 season_box">
+                <div class="ss ss_bottom">
+                  <div class="s_products s_products07">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_07.png" alt="오토하우스 - S II"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>오토하우스 - S II</strong>
+                      ￦ 410,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products08">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_08.png" alt="와우 빅돔 골드"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>와우 빅돔 골드</strong>
+                      ￦413,000원
+                    </div>
+                  </div>
+                </div>
+                <div class="ss ss_bottom">
+                  <div class="s_products s_products05">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_09.png" alt="WS 플랫 체어"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>WS 플랫 체어</strong>
+                      ￦78,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products10">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_10.png" alt="미니 마스터 체어"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>미니 마스터 체어</strong>
+                      ￦40,000원
+                    </div>
+                  </div>          
+                </div>
+                <div class="ss">
+                  <div class="s_products s_products11">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_11.png" alt="시에라컵 500"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>시에라컵 500</strong>
+                      ￦11,000원
+                    </div>
+                  </div>
+                  <div class="s_products s_products12">
+                    <div class="size_box"><a href="#"><img src="./img/s_image-view_12.png" alt="아미고 캠프컵 II"></a></div>
+                    <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                    <div class="name_price_box">
+                      <strong>아미고 캠프컵 II</strong>
+                      ￦11,000원
+                    </div>
+                  </div>       
+                </div>
+                
+              </div>
+              <!-- season_box02 -->
+            </div>
+          <!-- season_product_box -->
         </div>
-        <!-- season_product_box -->
+        <div id="tab3" class="seatab_cont">
+          <div class="season_product_box season_product_box03">
+            <div class="season_box01 season_box">
+              <div class="ss ss_bottom">
+                <h5>TENT</h5>
+                <div class="s_products s_products01">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_01.png" alt="고스트 팬덤"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div> 
+                  <div class="name_price_box">
+                    <strong>고스트 팬덤</strong>
+                    ￦1,290,000원
+                  </div>
+                </div>
+                <div class="s_products s_products02">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_02.png" alt="고스트 플러스"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>고스트 플러스</strong>
+                    ￦1,080,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss ss_bottom">
+                <h5>FURNITURE</h5>    
+                <div class="s_products s_products03">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_03.png" alt="WS 롤 테이블 - XL"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>WS 롤 테이블 - XL</strong>
+                    ￦168,000원
+                  </div>
+                </div>
+                <div class="s_products s_products04">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_04.png" alt="WS 쿨러 멀티 테이블"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>WS 쿨러 멀티 테이블</strong>
+                    ￦79,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss">
+                <h5>ACCESSORY</h5>
+                <div class="s_products s_products09">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_05.png" alt="핵사 아이언 화로대 - S"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>핵사 아이언 화로대 - S</strong>
+                    ￦129,000원
+                  </div>
+                </div>
+                <div class="s_products s_products06">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_06.png" alt="코베아 폴딩박스"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>코베아 폴딩박스</strong>
+                    ￦32,000원
+                  </div>
+                </div>       
+              </div> 
+            </div> <!-- season_box01  -->
+            <div class="season_box02 season_box">
+              <div class="ss ss_bottom">
+                <div class="s_products s_products07">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_07.png" alt="레트로 파빌리온"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>레트로 파빌리온</strong>
+                    ￦1,380,000원
+                  </div>
+                </div>
+                <div class="s_products s_products08">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_08.png" alt="고스트 쉘터"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>고스트 쉘터</strong>
+                    ￦780,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss ss_bottom">
+                <div class="s_products s_products05">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_09.png" alt="WS 캔버스 롱 체어"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>WS 캔버스 롱 체어</strong>
+                    ￦108,000원
+                  </div>
+                </div>
+                <div class="s_products s_products10">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_10.png" alt="WS 패밀리 벤치 체어"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>WS 패밀리 벤치 체어</strong>
+                    ￦130,000원
+                  </div>
+                </div>          
+              </div>
+              <div class="ss">
+                <div class="s_products s_products11">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_11.png" alt="마데라 우드 도마"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>마데라 우드 도마</strong>
+                    ￦30,000원
+                  </div>
+                </div>
+                <div class="s_products s_products12">
+                  <div class="size_box"><a href="#"><img src="./img/a_image-view_12.png" alt="마데라 우드 수저"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>마데라 우드 수저</strong>
+                    ￦8,000원
+                  </div>
+                </div>       
+              </div>
+              
+            </div>
+            <!-- season_box02 -->
+          </div>
+          <!-- season_product_box -->
+        </div>
+        <div id="tab4" class="seatab_cont">
+          <div class="season_product_box season_product_box04">
+            <div class="season_box01 season_box">
+              <div class="ss ss_bottom">
+                <h5>TENT</h5>
+                <div class="s_products s_products01">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_01.png" alt="이스턴 시그니처"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div> 
+                  <div class="name_price_box">
+                    <strong>이스턴 시그니처</strong>
+                    ￦1,850,000원
+                  </div>
+                </div>
+                <div class="s_products s_products02">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_02.png" alt="에버캠프 시그니처"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>에버캠프 시그니처</strong>
+                    ￦1,670,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss ss_bottom">
+                <h5>FURNITURE</h5>    
+                <div class="s_products s_products03">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_03.png" alt="벨로 우드 롤 테이블 - L"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>벨로 우드 롤 테이블 - L</strong>
+                    ￦199,000원
+                  </div>
+                </div>
+                <div class="s_products s_products04">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_04.png" alt="벨로 우드 쉘프"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>벨로 우드 쉘프</strong>
+                    ￦121,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss">
+                <h5>ACCESSORY</h5>
+                <div class="s_products s_products09">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_05.png" alt="더블 히트 화목난로"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>더블 히트 화목난로</strong>
+                    ￦700,000원
+                  </div>
+                </div>
+                <div class="s_products s_products06">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_06.png" alt="보니따 오거나이저"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>보니따 오거나이저</strong>
+                    ￦25,000원
+                  </div>
+                </div>       
+              </div>
+            </div> <!-- season_box01  -->
+            <div class="season_box02 season_box">
+              <div class="ss ss_bottom">
+                <div class="s_products s_products07">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_07.png" alt="카바나"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>카바나</strong>
+                    ￦1,090,000원
+                  </div>
+                </div>
+                <div class="s_products s_products08">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_08.png" alt="아웃백 시그니처"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>아웃백 시그니처</strong>
+                    ￦1,550,000원
+                  </div>
+                </div>
+              </div>
+              <div class="ss ss_bottom">
+                <div class="s_products s_products05">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_09.png" alt="벨로 우드 플랫 체어"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>벨로 우드 플랫 체어</strong>
+                    ￦96,000원
+                  </div>
+                </div>
+                <div class="s_products s_products10">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_10.png" alt="릴렉스 롱 체어 - 골든 브라운"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>릴렉스 롱 체어 - 골든 브라운</strong>
+                    ￦53,000원
+                  </div>
+                </div>          
+              </div>
+              <div class="ss">
+                <div class="s_products s_products11">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_11.png" alt="헥사 아이언 화로대"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>헥사 아이언 화로대</strong>
+                    ￦169,000원
+                  </div>
+                </div>
+                <div class="s_products s_products12">
+                  <div class="size_box"><a href="#"><img src="./img/w_image-view_12.png" alt="5V 히팅 가스 워머 업 450"></a></div>
+                  <div class="info_btn"><img src="./img/info_icon01.gif" alt="info_btn"></div>
+                  <div class="name_price_box">
+                    <strong>5V 히팅 가스 워머 업 450</strong>
+                    ￦28,000원
+                  </div>
+                </div>       
+              </div>
+              
+            </div>
+            <!-- season_box02 -->
+          </div>
+          <!-- season_product_box -->
+        </div>  
       </div>
       <!-- season_right -->
+
     </div>
     <!-- season_selection_inner -->
 
     <ul class="season_menu_tabbtn">
-      <li class="is_on"><a href="">SPRING SELECTION</a></li>
-      <li><a href="">SUMMER SELECTION</a></li>
-      <li><a href="">AUTUMN SELECTION</a></li>
-      <li><a href="">WINTER SELECTION</a></li>
-    </ul>
+      <li class="on"><a class="tabbtn" href="#tab1">SPRING SELECTION</a></li>
+      <li><a class="tabbtn" href="#tab2">SUMMER SELECTION</a></li>
+      <li><a class="tabbtn" href="#tab3">AUTUMN SELECTION</a></li>
+      <li><a class="tabbtn" href="#tab4">WINTER SELECTION</a></
     <!-- season_menu -->
   </section>
   <!--  season_selection_outer -->
@@ -1852,9 +2222,9 @@
        <!-- side_menu_btn -->
 
       <div class="side_top_btn">
-        <div><a href="#"><i class="xi-angle-up-min"></i></a></div>
-        <div><a href="#"><i class="xi-home"></i></a></div>
-        <div><a href="#"><i class="xi-angle-down-min"></i></a></div>
+        <div class="top"><a href="#"><i class="xi-angle-up-min"></i></a></div>
+        <div class="home"><a href="./index.html"><i class="xi-home"></i></a></div>
+        <div class="bottom"><a href="#"><i class="xi-angle-down-min"></i></a></div>
       </div>
       <!-- side_top_btn -->
 
