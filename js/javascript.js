@@ -29,7 +29,7 @@ let hideBtn = document.querySelector('.side_top_btn')
     const searchVar = document.querySelector('.search_var')
 
     searchVar.addEventListener('focus',()=>{
-    searchVar.style.width='90%'
+    searchVar.style.width='85%'
     searchVar.setAttribute('placeholder',' 검색어를 입력하세요.')
     })
 

@@ -141,7 +141,7 @@
 }
 
 .header_center .logo p {
-  font-size: 11px;
+  font-size: 12px;
   color: #f49c0f;
 
 
@@ -350,17 +350,12 @@
   line-height: 60px;
 }
 
-.search_nav {
-  /* flex: 1; */
-}
+
 
 .lnb_nav {
   width: 30%;
 }
 
-.brand_nav {
-  /* flex: 1; */
-}
 
 .lnb_nav ul li~li {
   padding-left: 20px;
@@ -376,9 +371,18 @@
   transition: all 0.4s;
 }
 
+.menu_nav ul li.b {
+  transition: all 0.4s;
+}
+
 .menu_nav ul li a:hover {
   color: #f49c0f;
   text-decoration: underline;
+}
+
+.menu_nav ul li.b a:hover {
+  color: #999;
+  text-decoration: none;
 
 }
 
@@ -409,10 +413,7 @@
   top: -4px;
   font-size: 14px;
   color: #fff;
-
 }
-
-
 
 /* lnb_nav li.home  */
 .lnb_nav li.home {
@@ -424,13 +425,22 @@
 
 .lnb_nav li.home i {
   color: #fff;
-
   font-size: 16px;
 }
 
 /* brand_nav */
+
+.brand_nav {
+  /* background-color: #222; */
+  /* padding: 0 15px; */
+}
+
 .brand_nav li a {
   text-align: right;
+}
+
+.brand_nav li:hover a {
+  color: #000;
 }
 
 
@@ -1905,13 +1915,17 @@
 }
 
 /* commingsoon_outer */
-.commingsoon_outer {}
+.commingsoon_outer {
+  padding: 50px 0;
+  /* overflow: hidden;s */
+  /* background-color: #00C73C; */
+}
 
 .commingsoon_outer .commingsoon_inner {
   display: flex;
   align-items: center;
   width: 1280px;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
 }
 
@@ -1924,8 +1938,8 @@
 
 .commingsoon_left .commimg_main {
   width: 100%;
-  background: url(../img/bg_cjb_cover.png)no-repeat center center/130%;
-  height: 500px;
+  background: url(../img/bg_cjb_cover.png)no-repeat center center/170%;
+  height: 400px;
 }
 
 .commimg_main .comming_main_cont {
@@ -1935,7 +1949,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 500px;
+  height: 400px;
 }
 
 .comming_main_cont h2 {
@@ -1945,14 +1959,14 @@
 .commimg_main .comming_main_cont .cm_title_l {
   position: absolute;
   left: 5px;
-  top: 30px;
+  top: 0px;
   font-size: 26px;
 }
 
 .commimg_main .comming_main_cont .cm_title_r {
   position: absolute;
   right: 5px;
-  top: 100px;
+  top: 60px;
   text-transform: uppercase;
   font-size: 16px;
   color: #555;
@@ -1962,7 +1976,7 @@
 .commimg_main .comming_main_cont .commimg_logo_box {
   position: absolute;
   left: 130px;
-  bottom: 130px;
+  bottom: 90px;
   width: 100%;
   height: 100px;
   margin-bottom: 50px;
@@ -1970,8 +1984,9 @@
 
 .commimg_main .comming_main_cont .commimg_product_box {
   position: absolute;
-  right: 160px;
-  bottom: 190px;
+  right: 163px;
+  bottom: 120px;
+  text-transform: uppercase;
 }
 
 .commimg_logo_box em {
@@ -1982,7 +1997,7 @@
 
 .comming_main_cont .btn_commingsoon_detail {
   position: absolute;
-  bottom: 90px;
+  bottom: 45px;
   display: block;
   width: 100px;
   height: 35px;
@@ -2005,7 +2020,6 @@
 
 .commingsoon_right {
   position: relative;
-  overflow: hidden;
   width: 66.6666%;
   display: flex;
   /* height: 500px; */
@@ -2015,24 +2029,23 @@
 
 .comming_product_swiper {
   position: relative;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  height: 500px;
+  height: 400px;
 }
 
 .comming_product_swiper .swiper-wrapper {
   position: absolute;
-  top: 55px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
 .commingsoon_right .swiper-slide {
-  overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: end;
 }
@@ -2047,17 +2060,17 @@
   align-items: center;
   border: 1px solid #eee;
   box-sizing: border-box;
-  padding: 40px 0;
+  /* padding: 40px 0; */
   box-sizing: border-box;
   background-color: #fff;
-  height: 400px;
+  /* height: 400px; */
 }
 
 
 .commingsoon_right .btn_comming_arrows {
   z-index: 1000;
   position: absolute;
-  top: 0;
+  top: -40px;
   right: 0;
   width: 100px;
   height: 30px;
