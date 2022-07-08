@@ -73,26 +73,30 @@ let hideBtn = document.querySelector('.side_top_btn')
 
           const menuBtn = document.querySelector('.search_nav')
           const menu = document.querySelector('.search_outer .menu_sub_search')
-
-          const lnbBtn = document.querySelector('.lnb_nav')
-          const lnbsub = document.querySelector('.lnb_outer .sub_lnb_outer')
-          let isClick = false
+          const isState = false
+         
 
           menuBtn.addEventListener('click',()=>{
-            if(isClick==false){
+            if(isState==false){
               gsap.to(menu, 0.2, { 
                 top: '60px',
                 display:'block'
               },200)
-              isClick = true
+              isState = true
              
             }else{
               gsap.to(menu, 0.2, { 
                 top: '-500px',
               },200)
-              isClick = false
+              isState = false
             }
           })
+
+
+
+           const lnbBtn = document.querySelector('.lnb_nav')
+           const lnbsub = document.querySelector('.lnb_outer .sub_lnb_outer')
+           const isClick = false
 
           lnbBtn.addEventListener('click',()=>{
 
