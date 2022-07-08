@@ -1,3 +1,8 @@
+
+
+
+
+
 let hideBtn = document.querySelector('.side_top_btn')
 
  window.addEventListener('scroll',()=>{
@@ -71,50 +76,50 @@ let hideBtn = document.querySelector('.side_top_btn')
 
       
 
-          const menuBtn = document.querySelector('.search_nav')
-          const menu = document.querySelector('.search_outer .menu_sub_search')
-          const isState = false
-         
+          // const menuBtn = document.querySelector('.search_nav')
+          // const menu = document.querySelector('.search_outer .menu_sub_search')
 
-          menuBtn.addEventListener('click',()=>{
-            if(isState==false){
-              gsap.to(menu, 0.2, { 
-                top: '60px',
-                display:'block'
-              },200)
-              isState = true
+          // const lnbBtn = document.querySelector('.lnb_nav')
+          // const lnbsub = document.querySelector('.lnb_outer .sub_lnb_outer')
+          // let isClick = false
+
+          // menuBtn.addEventListener('click',()=>{
+          //   if(isClick==false){
+          //     gsap.to(menu, 0.2, { 
+          //       top: '60px',
+          //       display:'block'
+          //     },200)
+          //     isClick = true
              
-            }else{
-              gsap.to(menu, 0.2, { 
-                top: '-500px',
-              },200)
-              isState = false
-            }
-          })
+          //   }else{
+          //     gsap.to(menu, 0.2, { 
+          //       top: '-500px',
+          //     },200)
+          //     isClick = false
+          //   }
+          // })
 
+          // menuBtn.addEventListener('blur',()=>{
+          //   menu.style.display=''
+          // })
 
+          // lnbBtn.addEventListener('click',()=>{
 
-           const lnbBtn = document.querySelector('.lnb_nav')
-           const lnbsub = document.querySelector('.lnb_outer .sub_lnb_outer')
-           const isClick = false
-
-          lnbBtn.addEventListener('click',()=>{
-
-            if(isClick==false){
+          //   if(isClick==false){
           
-              gsap.to(lnbsub, 0.2, { 
-                top: '60px',
-              },200)
-              isClick = true
+          //     gsap.to(lnbsub, 0.2, { 
+          //       top: '60px',
+          //     },200)
+          //     isClick = true
 
-            }else{
+          //   }else{
               
-              gsap.to(lnbsub, 0.2, { 
-                top: '-300px',
-              },200)
-              isClick = false
-            }
-          })
+          //     gsap.to(lnbsub, 0.2, { 
+          //       top: '-300px',
+          //     },200)
+          //     isClick = false
+          //   }
+          // })
 
 
           const tabList = document.querySelectorAll('.season_menu_tabbtn > li');
