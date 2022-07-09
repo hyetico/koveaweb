@@ -27,7 +27,54 @@ let hideBtn = document.querySelector('.side_top_btn')
     // })
     // })
 
-      
+//헤더 메뉴
+
+let menu = document.querySelector('.menu_outer'),
+   menuList = document.querySelectorAll('.menu_inner>ul>li'),
+   menuTxts = document.querySelectorAll('.menu_inner>ul>li>a')
+   subMenu = document.querySelector('.submenu'),
+   menuHeight = menu.offsetHeight,
+   subMenuHeight = subMenu.offsetHeight;
+
+   menu.addEventListener('mouseover',() => {
+        menu.style.background = '#fff'
+        menu.style.border='1px solid #ccc'
+        menuTxts.forEach((text)=>{
+          text.style.color='#000'
+        })
+        menu.style.height = menuHeight + subMenuHeight + 'px'
+       })
+       console.log(menuHeight)
+  
+       menu.addEventListener('mouseout',() => {
+        menu.style.background = '#000'
+        menuTxts.forEach((text)=>{
+          text.style.color='#fff'
+        })
+           menu.style.height = menuHeight + 'px'
+         })
+
+  //  for(let i=0 ; i < menuList.length ; i++) {
+  //  menuList[i].addEventListener('mouseover',() => {
+  //     menu.style.background = '#fff'
+  //     menu.style.border='1px solid #ccc'
+  //     menu.style.height = menuHeight + subMenuHeight + 'px'
+  //    })
+  //    console.log(menuHeight)
+
+  //    menuList[i].addEventListener('mouseout',() => {
+  //     menu.style.background = '#000'
+  //        menu.style.height = menuHeight + 'px'
+  //      })
+  //  }
+
+
+   
+    console.log(menuHeight)
+
+
+
+
 
 
 //헤더 검색창
