@@ -1,11 +1,10 @@
 
 
-
-
-
 let hideBtn = document.querySelector('.side_top_btn')
-
- window.addEventListener('scroll',()=>{
+const topBtn = document.querySelector('.side_top_btn .top')
+const bottomBtn = document.querySelector('.side_top_btn .bottom')
+ 
+window.addEventListener('scroll',()=>{
   let scrollTop = document.documentElement.scrollTop || window.scrollY
 
       if(scrollTop>500){
@@ -19,13 +18,29 @@ let hideBtn = document.querySelector('.side_top_btn')
           }
       })
 
+      topBtn.addEventListener('click',()=>{
+      gsap.to(window, 0.5, { 
+        scrollTo:0
+      })
+    })
 
-    // topBtn.addEventListener('click',()=>{
-    //   //gsap.to(요소, 시간, {애니메이션옵션(객체)})
-    // gsap.to(window, 0.5, { 
-    //   scrollTo:0
-    // })
-    // })
+      bottomBtn.addEventListener('click',()=>{
+      gsap.to(window, 0.5, { 
+        scrollTo:9999
+      })
+    })
+
+   
+
+    
+
+  
+
+
+
+
+    
+
 
 //헤더 메뉴
 
